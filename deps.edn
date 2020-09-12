@@ -1,0 +1,22 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        metosin/reitit-ring {:mvn/version "0.5.5"}
+        metosin/reitit-middleware {:mvn/version "0.5.5"}
+        ring/ring-core {:mvn/version "1.8.1"}
+        ring/ring-jetty-adapter {:mvn/version "1.8.1"}
+        integrant {:mvn/version "0.8.0"}
+        integrant/repl {:mvn/version "0.3.1"}
+        cljstache {:mvn/version "2.0.6"}}
+ :aliases
+ {       :dev {:extra-paths ["dev"]}
+         :test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.0.0"}}}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "f7ef16dc3b8332b0d77bc0274578ad5270fbfedd"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}
+  :uberjar {:extra-deps {seancorfield/depstar {:mvn/version "1.0.94"}}
+            :main-opts ["-m" "hf.depstar.uberjar" "reit-app.jar"
+                        "-C" "-m" "reit.reit-app"]}}}
