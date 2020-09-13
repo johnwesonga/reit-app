@@ -9,6 +9,7 @@
         cljstache {:mvn/version "2.0.6"}}
  :aliases
  {       :dev {:extra-paths ["dev"]}
+         :server {:main-opts ["-m" "reit.reit-app"]}
          :test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.0.0"}}}
   :runner

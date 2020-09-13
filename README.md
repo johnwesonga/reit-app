@@ -1,18 +1,35 @@
 # reit-app
 
-FIXME: my new application.
+Basic [reitit](https://github.com/metosin/reitit) + [Integrant](https://github.com/weavejester/integrant) app
+
 
 ## Installation
 
-Download from https://github.com/reit/reit-app.
+Download from https://github.com/johnwesonga/reit-app.
 
 ## Usage
 
 FIXME: explanation
 
+Run the project using an alias configured in =deps.edn= file.
+
+    $ clj -A:server
+
 Run the project directly:
 
     $ clojure -m reit.reit-app
+
+Now acces the app at: http://localhost:8080/.
+
+Run the Application in REPL
+
+     $ clj -A:dev
+
+Once REPL starts, run the system:
+  
+     user=> (go)
+  
+Now acces the app at: http://localhost:8080/.
 
 Run the project's tests (they'll fail until you edit them):
 
@@ -25,22 +42,6 @@ Build an uberjar:
 Run that uberjar:
 
     $ java -jar reit-app.jar
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
