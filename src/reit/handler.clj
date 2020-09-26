@@ -16,7 +16,7 @@
     (ring/ring-handler
         (ring/router
             [
-            ; ["/healthz" {:get (fn [_] {:status 200 :body "healthy"})}]
+            ["/healthz" {:get (fn [_] {:status 200 :body "healthy"})}]
             ;  ["/" {
             ;      :handler #'ctl/default}]
             ;  ["/greet/:name" {:get {:parameters {:path {:name s/Str}}}
